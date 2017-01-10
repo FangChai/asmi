@@ -98,7 +98,7 @@ struct op_t8 {
     unsigned reg0 : 3;
     unsigned reg1 : 4;
     unsigned pad : 20;
-}
+};
 
 union op_u {
     uint32_t litera;
