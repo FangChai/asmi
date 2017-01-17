@@ -49,55 +49,55 @@ enum op_e {
 };
 
 struct op_t1 {
+    unsigned : 27;
     unsigned op : 5;
-    unsigned pad : 27;
 };
 
 struct op_t2 {
-    unsigned op : 5;
-    unsigned pad : 3;
     unsigned addr : 24;
+    unsigned : 3;
+    unsigned op : 5;
 };
 
 struct op_t3 {
-    unsigned op : 5;
+    unsigned : 24;
     unsigned reg0 : 3;
-    unsigned pad : 24;
+    unsigned op : 5;
 };
 
 struct op_t4 {
-    unsigned op : 5;
-    unsigned reg0 : 3;
     unsigned addr : 24;
+    unsigned reg0 : 3;
+    unsigned op : 5;
 };
 
 struct op_t5 {
-    unsigned op : 5;
-    unsigned reg0 : 3;
-    unsigned pad : 8;
     unsigned imme : 16;
+    unsigned : 8;
+    unsigned reg0 : 3;
+    unsigned op : 5;
 };
 
 struct op_t6 {
-    unsigned op : 5;
-    unsigned reg0 : 3;
-    unsigned pad : 16;
     unsigned port : 8;
+    unsigned : 16;
+    unsigned reg0 : 3;
+    unsigned op : 5;
 };
 
 struct op_t7 {
-    unsigned op : 5;
-    unsigned reg0 : 3;
-    unsigned reg1 : 4;
+    unsigned : 16;
     unsigned reg2 : 4;
-    unsigned pad : 16;
+    unsigned reg1 : 4;
+    unsigned reg0 : 3;
+    unsigned op : 5;
 };
 
 struct op_t8 {
-    unsigned op : 5;
-    unsigned reg0 : 3;
+    unsigned : 20;
     unsigned reg1 : 4;
-    unsigned pad : 20;
+    unsigned reg0 : 3;
+    unsigned op : 5;
 };
 
 union op_u {
